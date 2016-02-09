@@ -1,0 +1,30 @@
+﻿@model Jmp.Reports.ReportData
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Timeline @string.Format("({0} weeks)", Model.Rows.Length)</td>
+            @foreach (var h in Model.ColumnHeaders)
+            {
+                <td>@string.Format("{0} ({1} hours)", h.Label, h.TotalRemainingSeconds / 60 / 60)</td>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var r in Model.Rows)
+        {
+            <tr>
+                <td>@r.Label</td>
+                @foreach (var c in r.Cells)
+                {
+                    <td>
+                        @foreach (var i in c.Issues)
+                        {
+                            <div class="alert alert-info" title="@i.Fields.Summary">@string.Format("{0} {1} ({2} left)", i.Key, StringHelper.Truncate(i.Fields.Summary, 20), i.Fields.TimeTracking.RemainingEstimate)</div>
+                        }
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
