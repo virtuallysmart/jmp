@@ -47,9 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Capacity\CapacityService.cs" />
-    <Compile Include="Capacity\ICapacityService.cs" />
-    <Compile Include="Capacity\MockCapacityService.cs" />
     <Compile Include="Jira\IJiraClient.cs" />
     <Compile Include="Jira\Issue.cs" />
     <Compile Include="Jira\IssueFields.cs" />

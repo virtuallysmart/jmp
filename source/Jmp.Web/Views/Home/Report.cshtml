@@ -5,7 +5,7 @@
 </div>
 
 <div class="alert alert-info">
-    @string.Format("end date: {0}, critical path: {1}", Model.ReportData.EndDate.ToShortDateString(), Model.ReportData.CriticalPath)
+    @string.Format("end date: {0}, critical path: {1}", Model.ReportData.EndDate.ToString("MM/dd/yy"), Model.ReportData.CriticalPath)
 </div>
 <hr />
 
@@ -41,25 +41,33 @@
         @foreach (var r in Model.ReportData.Rows)
         {
             <tr>
-                <td>@r.Label</td>
+                <td>
+                    @r.Label
+                    <br />
+                    <span class="badge">@string.Format("{0} - {1}", r.StartDate.ToString("MM/dd"), r.EndDate.ToString("MM/dd"))</span>
+                </td>
                 @foreach (var c in r.Cells)
                 {
                     <td>
                         @{ string css; }
-                        @if (c.CapacitySeconds >= c.RemainingEstimateSeconds)
+                        @if (c.UsedSeconds == 0)
                         {
-                            css = "alert-success";
+                            css = "alert-danger";
+                        }
+                        else if (c.CapacitySeconds / c.UsedSeconds > 1.5)
+                        {
+                            css = "alert-warning";
                         }
                         else
                         {
-                            css = "alert-danger";
+                            css = "alert-success";
                         }
                         <div class="alert @css">
                             stream: @c.Label
                             <br />
                             capacity: @string.Format("{0}h", c.CapacitySeconds / 60 / 60)
                             <br />
-                            estimate: @string.Format("{0}h", c.RemainingEstimateSeconds / 60 / 60)
+                            estimate: @string.Format("{0}h", c.UsedSeconds / 60 / 60)
                             <br />
                             issues: @string.Format("{0}", c.Issues.Length)
                         </div>

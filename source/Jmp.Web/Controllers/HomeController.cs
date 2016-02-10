@@ -1,5 +1,4 @@
-﻿using Jmp.Capacity;
-using Jmp.Jira;
+﻿using Jmp.Jira;
 using Jmp.Reports;
 using Jmp.Web.Models;
 using System;
@@ -36,7 +35,8 @@ namespace Jmp.Web.Controllers
                 return RedirectToAction("Index");
             }
             var issues = _jiraClient.GetIssues(setup.JiraApiUrl, setup.JiraUserName, setup.JiraPassword, setup.Jql);
-            var reportData = _reportService.GetReportData(issues, setup.ColumnLabelPrefix);
+            var capacity = ParseCapacitySetup(setup.WeeklyCapacityHoursPerStream);
+            var reportData = _reportService.GetReportData(issues, setup.ColumnLabelPrefix, capacity);
             var model = new ReportModel()
             {
                 ReportSetup = setup,
@@ -54,6 +54,28 @@ namespace Jmp.Web.Controllers
             }
             Session["setup"] = setup;
             return RedirectToAction("Report");
+        }
+
+        //e.g. *: 30
+        //e.g. Bart: 30, Kasia: 30, Tom: 20
+        private static IDictionary<string, int> ParseCapacitySetup(string capacityString)
+        {
+            var capacity = new Dictionary<string, int>();
+            var byStream = capacityString.Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+            if (byStream.Length == 0)
+            {
+                throw new ArgumentException("Invalid capacity setup format");
+            }
+            foreach (var bs in byStream)
+            {
+                var s = bs.Split(":".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                if (s.Length == 0)
+                {
+                    throw new ArgumentException("Invalid capacity setup format");
+                }
+                capacity.Add(s[0], int.Parse(s[1]));
+            }
+            return capacity;
         }
     }
 }

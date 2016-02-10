@@ -17,6 +17,8 @@ namespace Jmp.Web.Models
 
         public string Jql { get; set; }
 
-        public string ColumnLabelPrefix { get; set; }        
+        public string ColumnLabelPrefix { get; set; }
+
+        public string WeeklyCapacityHoursPerStream { get; set; }
     }
 }

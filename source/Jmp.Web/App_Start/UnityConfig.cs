@@ -4,7 +4,6 @@ using Microsoft.Practices.Unity.Configuration;
 using Jmp.Jira;
 using Jmp.Reports;
 using Jmp.Web.Models;
-using Jmp.Capacity;
 
 namespace Jmp.Web.App_Start
 {
@@ -41,14 +40,14 @@ namespace Jmp.Web.App_Start
                 JiraApiUrl = "https://orwell.atlassian.net/rest/api/2/",
                 JiraBrowseUrl = "https://orwell.atlassian.net/browse/",
                 Jql = "project=MVPD1",
-                ColumnLabelPrefix = "jmp-stream-"
+                ColumnLabelPrefix = "jmp-stream-",
+                WeeklyCapacityHoursPerStream = "*: 40"
             };
 
             container.RegisterInstance<ReportSetup>(defaultReportSetup, new ContainerControlledLifetimeManager());
 
             container.RegisterType<IJiraClient, JiraClient>();
             container.RegisterType<IReportService, ReportService>();
-            container.RegisterType<ICapacityService, MockCapacityService>();
         }
     }
 }

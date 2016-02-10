@@ -33,6 +33,10 @@
                 @Html.TextBoxFor(u => u.ColumnLabelPrefix, new { @class = "form-control", value = Model.ColumnLabelPrefix })
             </div>
             <div class="form-group">
+                @Html.LabelFor(u => u.WeeklyCapacityHoursPerStream)
+                @Html.TextAreaFor(u => u.WeeklyCapacityHoursPerStream, new { @class = "form-control", value = Model.WeeklyCapacityHoursPerStream })
+            </div>
+            <div class="form-group">
                 <input type="submit" class="form-control btn btn-primary" value="Generate" />
             </div>
         }

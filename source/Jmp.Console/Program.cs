@@ -1,5 +1,4 @@
-﻿using Jmp.Capacity;
-using Jmp.Jira;
+﻿using Jmp.Jira;
 using Jmp.Reports;
 using Newtonsoft.Json;
 using RestSharp;
@@ -28,8 +27,10 @@ namespace Jmp.Console
             var jiraClient = new JiraClient();
             var issues = jiraClient.GetIssues(setup.JiraApiUrl, setup.JiraUserName, setup.JiraPassword, setup.Jql);
 
-            var reportService = new ReportService(new MockCapacityService());
-            var report = reportService.GetReportData(issues, setup.ColumnLabelPrefix);
+            var reportService = new ReportService();
+            var capacity = new Dictionary<string, int>() { { "*", 40 } };
+
+            var report = reportService.GetReportData(issues, setup.ColumnLabelPrefix, capacity);
         }
 
         public class ReportSetup

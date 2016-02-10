@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Jmp.Jira
 {
+    [Serializable]
     public class IssueFields
     {
         public string Summary { get; set; }

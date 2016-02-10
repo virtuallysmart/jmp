@@ -13,7 +13,7 @@ namespace Jmp.Reports
 
         public Issue[] Issues { get; set; }
 
-        public long RemainingEstimateSeconds { get; set; }
+        public long UsedSeconds { get; set; }
 
         public long CapacitySeconds { get; set; }
     }
