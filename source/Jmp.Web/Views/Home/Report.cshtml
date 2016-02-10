@@ -88,6 +88,8 @@
                             <div class="alert @issueCss" title="@i.Fields.Summary">
                                 <a href="@string.Format("{0}{1}", Model.ReportSetup.JiraShowIssueUrl, i.Key)" target="_blank" class="small">@i.Key</a>
                                 <br />
+                                <span class="small text-info">@i.Fields.Status.Name.ToString()</span>
+                                <br />
                                 <span class="badge">@i.Fields.TimeTracking.RemainingEstimate</span>
                             </div>
                         }
