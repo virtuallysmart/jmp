@@ -38,8 +38,8 @@ namespace Jmp.Web.App_Start
             var defaultReportSetup = new ReportSetup()
             {
                 Jql = "project=MVPD1",
-                ColumnLabelPrefix = "jmp-stream-",
-                WeeklyCapacityHoursPerStream = "*: 40",
+                ColumnLabelPrefix = "jmp-byperson-",
+                WeeklyCapacityHoursPerStream = "*: 30",
                 IssueFinalStatuses = "DEV COMPLETE, CANCELLED",
                 JiraApiUrl = "https://orwell.atlassian.net/rest/api/2/",
                 JiraShowIssueUrl = "https://orwell.atlassian.net/browse/",
