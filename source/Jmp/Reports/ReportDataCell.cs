@@ -9,8 +9,12 @@ namespace Jmp.Reports
 {
     public class ReportDataCell
     {
+        public string Label { get; set; }
+
         public Issue[] Issues { get; set; }
 
         public long RemainingEstimateSeconds { get; set; }
+
+        public long CapacitySeconds { get; set; }
     }
 }

@@ -1,26 +1,77 @@
-﻿@model Jmp.Reports.ReportData
+﻿@model ReportModel
 
-<table class="table">
+<div class="page-header">
+    <h1>Jira Master Plan Report</h1>
+</div>
+
+<div class="alert alert-info">
+    @string.Format("end date: {0}, critical path: {1}", Model.ReportData.EndDate.ToShortDateString(), Model.ReportData.CriticalPath)
+</div>
+<hr />
+
+@foreach (var warning in Model.ReportData.Warnings)
+{
+    <div class="alert alert-danger small">@string.Format("WARNING: {0}", warning)</div>
+    //add jira search link maybe?
+}
+@if (Model.ReportData.Warnings.Count > 0)
+{
+    <hr />
+}
+
+<table class="table table-condensed table-bordered table-responsive">
     <thead>
         <tr>
-            <td>Timeline @string.Format("({0} weeks)", Model.Rows.Length)</td>
-            @foreach (var h in Model.ColumnHeaders)
+            <td>
+                Timeline
+                <br />
+                <span class="badge">@string.Format("{0}w", Model.ReportData.Rows.Length)</span>
+            </td>
+            @foreach (var h in Model.ReportData.ColumnHeaders)
             {
-                <td>@string.Format("{0} ({1} hours)", h.Label, h.TotalRemainingSeconds / 60 / 60)</td>
+                <td>
+                    @h.Label
+                    <br />
+                    <span class="badge">@string.Format("{0}h", h.TotalRemainingSeconds / 60 / 60)</span>
+                </td>
             }
         </tr>
     </thead>
     <tbody>
-        @foreach (var r in Model.Rows)
+        @foreach (var r in Model.ReportData.Rows)
         {
             <tr>
                 <td>@r.Label</td>
                 @foreach (var c in r.Cells)
                 {
                     <td>
+                        @{ string css; }
+                        @if (c.CapacitySeconds >= c.RemainingEstimateSeconds)
+                        {
+                            css = "alert-success";
+                        }
+                        else
+                        {
+                            css = "alert-danger";
+                        }
+                        <div class="alert @css">
+                            stream: @c.Label
+                            <br />
+                            capacity: @string.Format("{0}h", c.CapacitySeconds / 60 / 60)
+                            <br />
+                            estimate: @string.Format("{0}h", c.RemainingEstimateSeconds / 60 / 60)
+                            <br />
+                            issues: @string.Format("{0}", c.Issues.Length)
+                        </div>
                         @foreach (var i in c.Issues)
                         {
-                            <div class="alert alert-info" title="@i.Fields.Summary">@string.Format("{0} {1} ({2} left)", i.Key, StringHelper.Truncate(i.Fields.Summary, 20), i.Fields.TimeTracking.RemainingEstimate)</div>
+                            <div class="alert alert-info" title="@i.Fields.Summary">
+                                <a href="@string.Format("{0}{1}", Model.ReportSetup.JiraBrowseUrl, i.Key)" target="_blank" class="small">@i.Key</a>
+                                <br />
+                                <span class="badge">@i.Fields.TimeTracking.RemainingEstimate</span>
+                                <br />
+                                <span class="small">@StringHelper.Truncate(i.Fields.Summary, 15)</span>
+                            </div>
                         }
                     </td>
                 }

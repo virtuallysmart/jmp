@@ -8,7 +8,7 @@ namespace Jmp.Capacity
 {
     public class CapacityService : ICapacityService
     {
-        public IDictionary<string, double> GetWeeklyCapacityByStream()
+        public long GetWeeklyCapacitySeconds(string stream)
         {
             throw new NotImplementedException();
         }

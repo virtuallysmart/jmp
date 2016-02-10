@@ -10,6 +10,8 @@ namespace Jmp.Jira
     {
         public string Summary { get; set; }
 
+        public Status Status { get; set; }
+
         public Priority Priority { get; set; }
 
         public string[] Labels { get; set; }

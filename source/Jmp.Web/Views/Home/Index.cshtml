@@ -1,17 +1,13 @@
 ﻿@model Jmp.Web.Models.ReportSetup
 
 <div class="page-header">
-    <h1>Report Setup</h1>
+    <h1>Jira Master Plan Report Setup</h1>
 </div>
 
 <div class="row">
     <div class="col-md-8">
         @using (Html.BeginForm("JiraLogin", "Home", FormMethod.Post))
         {
-            <div class="form-group">
-                @Html.LabelFor(u => u.JiraApiUrl)
-                @Html.TextBoxFor(u => u.JiraApiUrl, new { @class = "form-control", value = Model.JiraApiUrl })
-            </div>
             <div class="form-group">
                 @Html.LabelFor(u => u.JiraUserName)
                 @Html.TextBoxFor(u => u.JiraUserName, new { @class = "form-control" })
@@ -21,19 +17,23 @@
                 @Html.PasswordFor(u => u.JiraPassword, new { @class = "form-control" })
             </div>
             <div class="form-group">
-                @Html.LabelFor(u => u.IncludeLabel)
-                @Html.TextBoxFor(u => u.IncludeLabel, new { @class = "form-control", value = Model.IncludeLabel })
+                @Html.LabelFor(u => u.JiraApiUrl)
+                @Html.TextBoxFor(u => u.JiraApiUrl, new { @class = "form-control", value = Model.JiraApiUrl })
             </div>
             <div class="form-group">
-                @Html.LabelFor(u => u.ColumnNamePrefix)
-                @Html.TextBoxFor(u => u.ColumnNamePrefix, new { @class = "form-control", value = Model.ColumnNamePrefix })
+                @Html.LabelFor(u => u.JiraBrowseUrl)
+                @Html.TextBoxFor(u => u.JiraBrowseUrl, new { @class = "form-control", value = Model.JiraBrowseUrl })
             </div>
             <div class="form-group">
-                @Html.LabelFor(u => u.ColumnUnassignedLabel)
-                @Html.TextBoxFor(u => u.ColumnUnassignedLabel, new { @class = "form-control", value = Model.ColumnUnassignedLabel })
+                @Html.LabelFor(u => u.Jql)
+                @Html.TextBoxFor(u => u.Jql, new { @class = "form-control", value = Model.Jql })
             </div>
             <div class="form-group">
-                <input type="submit" class="form-control btn btn-primary" value="Log In" />
+                @Html.LabelFor(u => u.ColumnLabelPrefix)
+                @Html.TextBoxFor(u => u.ColumnLabelPrefix, new { @class = "form-control", value = Model.ColumnLabelPrefix })
+            </div>
+            <div class="form-group">
+                <input type="submit" class="form-control btn btn-primary" value="Generate" />
             </div>
         }
     </div>

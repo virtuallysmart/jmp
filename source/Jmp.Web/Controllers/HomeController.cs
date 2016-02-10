@@ -14,14 +14,12 @@ namespace Jmp.Web.Controllers
     {
         private readonly IJiraClient _jiraClient;
         private readonly IReportService _reportService;
-        private readonly ICapacityService _capacityService;
         private readonly ReportSetup _defaultReportSetup;
 
-        public HomeController(IJiraClient jiraClient, IReportService reportService, ICapacityService capacityService, ReportSetup defaultReportSetup)
+        public HomeController(IJiraClient jiraClient, IReportService reportService, ReportSetup defaultReportSetup)
         {
             _jiraClient = jiraClient;
             _reportService = reportService;
-            _capacityService = capacityService;
             _defaultReportSetup = defaultReportSetup;
         }
 
@@ -37,10 +35,14 @@ namespace Jmp.Web.Controllers
             {
                 return RedirectToAction("Index");
             }
-            var issues = _jiraClient.GetIssues(setup.JiraApiUrl, setup.JiraUserName, setup.JiraPassword, setup.IncludeLabel);
-            var capacity = _capacityService.GetWeeklyCapacityByStream();
-            var report = _reportService.GetReportData(issues, setup.ColumnNamePrefix, setup.ColumnUnassignedLabel, capacity);
-            return View(report);
+            var issues = _jiraClient.GetIssues(setup.JiraApiUrl, setup.JiraUserName, setup.JiraPassword, setup.Jql);
+            var reportData = _reportService.GetReportData(issues, setup.ColumnLabelPrefix);
+            var model = new ReportModel()
+            {
+                ReportSetup = setup,
+                ReportData = reportData
+            };
+            return View(model);
         }
 
         [HttpPost]

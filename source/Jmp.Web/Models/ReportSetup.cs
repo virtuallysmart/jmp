@@ -7,16 +7,16 @@ namespace Jmp.Web.Models
 {
     public class ReportSetup
     {
-        public string JiraApiUrl { get; set; }
-
         public string JiraUserName { get; set; }
 
         public string JiraPassword { get; set; }
 
-        public string IncludeLabel { get; set; }
+        public string JiraApiUrl { get; set; }
 
-        public string ColumnNamePrefix { get; set; }
+        public string JiraBrowseUrl { get; set; }
 
-        public string ColumnUnassignedLabel { get; set; }
+        public string Jql { get; set; }
+
+        public string ColumnLabelPrefix { get; set; }        
     }
 }

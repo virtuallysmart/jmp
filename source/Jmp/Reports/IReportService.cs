@@ -9,6 +9,6 @@ namespace Jmp.Reports
 {
     public interface IReportService
     {
-        ReportData GetReportData(Issue[] issues, string columnNamePrefix, string columnUnassignedLabel, IDictionary<string, double> weeklyCapacityByColumn);
+        ReportData GetReportData(Issue[] issues, string columnLabelPrefix);
     }
 }

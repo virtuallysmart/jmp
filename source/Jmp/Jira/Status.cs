@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Jmp.Jira
 {
-    public interface IJiraClient
+    public class Status
     {
-        Issue[] GetIssues(string jiraApiUrl, string jiraUserName, string jiraPassword, string jql);
+        public string Name { get; set; }
+
+        public StatusCategory StatusCategory { get; set; }
     }
 }

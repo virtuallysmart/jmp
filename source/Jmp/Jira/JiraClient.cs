@@ -12,7 +12,7 @@ namespace Jmp.Jira
 {
     public class JiraClient : IJiraClient
     {
-        public Issue[] GetIssues(string jiraApiUrl, string jiraUserName, string jiraPassword, string includeLabel)
+        public Issue[] GetIssues(string jiraApiUrl, string jiraUserName, string jiraPassword, string jql)
         {
             var results = new List<Issue>();
             var client = new RestClient(jiraApiUrl);
@@ -21,8 +21,8 @@ namespace Jmp.Jira
             while (true)
             {
                 var request = new RestRequest("search", Method.GET);
-                request.AddParameter("jql", string.Format("labels={0}", includeLabel));
-                request.AddParameter("fields", "summary,labels,priority,timetracking");
+                request.AddParameter("jql", jql);
+                request.AddParameter("fields", "summary,status,labels,priority,timetracking");
                 request.AddParameter("startAt", startAt);
                 var response = client.Execute(request);
                 if (response.StatusCode != HttpStatusCode.OK)

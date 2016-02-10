@@ -2,7 +2,7 @@
     "expand": "schema,names",
     "startAt": 0,
     "maxResults": 50,
-    "total": 15,
+    "total": 103,
     "issues": [
         {
             "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
@@ -10,6 +10,7 @@
             "self": "https://orwell.atlassian.net/rest/api/2/issue/11190",
             "key": "SYS-237",
             "fields": {
+                "summary": "Architecture POC parsing FP all the way through top->bottom",
                 "priority": {
                     "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
                     "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
@@ -22,7 +23,370 @@
                 "labels": [
                     "jmp",
                     "jmp-stream-Bart"
-                ]
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10102",
+                    "description": "Development has been completed and reviewed. When all tasks for the parent user story have been completed then the user story can be moved to UAT.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "DEV COMPLETE",
+                    "id": "10102",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/3",
+                        "id": 3,
+                        "key": "done",
+                        "colorName": "green",
+                        "name": "Done"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14707",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14707",
+            "key": "MVPD1-1301",
+            "fields": {
+                "summary": "Interview placeholder",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "remainingEstimate": "0m",
+                    "timeSpent": "1h 30m",
+                    "remainingEstimateSeconds": 0,
+                    "timeSpentSeconds": 5400
+                },
+                "labels": [
+                    "jmp"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10004",
+                    "description": "Having been selected for the current sprint, the assignee is now working on the task.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Dev in Progress",
+                    "id": "10004",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/4",
+                        "id": 4,
+                        "key": "indeterminate",
+                        "colorName": "yellow",
+                        "name": "In Progress"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14587",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14587",
+            "key": "MVPD1-1240",
+            "fields": {
+                "summary": "Account configuration - static data retriving",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "1d",
+                    "remainingEstimate": "1d",
+                    "originalEstimateSeconds": 28800,
+                    "remainingEstimateSeconds": 28800
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Adam"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10002",
+                    "description": "Tasks are defined, clarified and agreed by the Development team and contribute to a User Story. Tasks are done when they are \"DEV COMPLETE\", but the parent user story only moves in to UAT when all it's tasks are done. A task may be completely defined by one user, but often a task requires a mixture of stakeholder and development expertise to contribute to and refine the content prior to the task being in a fit state for development work to commence.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Definition",
+                    "id": "10002",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14586",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14586",
+            "key": "MVPD1-1239",
+            "fields": {
+                "summary": "Mock Service",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "4h",
+                    "remainingEstimate": "4h",
+                    "originalEstimateSeconds": 14400,
+                    "remainingEstimateSeconds": 14400
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Maciej"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10002",
+                    "description": "Tasks are defined, clarified and agreed by the Development team and contribute to a User Story. Tasks are done when they are \"DEV COMPLETE\", but the parent user story only moves in to UAT when all it's tasks are done. A task may be completely defined by one user, but often a task requires a mixture of stakeholder and development expertise to contribute to and refine the content prior to the task being in a fit state for development work to commence.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Definition",
+                    "id": "10002",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14585",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14585",
+            "key": "MVPD1-1238",
+            "fields": {
+                "summary": "UI and Service Integration",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "4h",
+                    "remainingEstimate": "4h",
+                    "originalEstimateSeconds": 14400,
+                    "remainingEstimateSeconds": 14400
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Maciej"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10002",
+                    "description": "Tasks are defined, clarified and agreed by the Development team and contribute to a User Story. Tasks are done when they are \"DEV COMPLETE\", but the parent user story only moves in to UAT when all it's tasks are done. A task may be completely defined by one user, but often a task requires a mixture of stakeholder and development expertise to contribute to and refine the content prior to the task being in a fit state for development work to commence.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Definition",
+                    "id": "10002",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14584",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14584",
+            "key": "MVPD1-1237",
+            "fields": {
+                "summary": "Data Access Layer",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "0m",
+                    "remainingEstimate": "0m",
+                    "originalEstimateSeconds": 0,
+                    "remainingEstimateSeconds": 0
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Maciej"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10002",
+                    "description": "Tasks are defined, clarified and agreed by the Development team and contribute to a User Story. Tasks are done when they are \"DEV COMPLETE\", but the parent user story only moves in to UAT when all it's tasks are done. A task may be completely defined by one user, but often a task requires a mixture of stakeholder and development expertise to contribute to and refine the content prior to the task being in a fit state for development work to commence.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Definition",
+                    "id": "10002",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14583",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14583",
+            "key": "MVPD1-1236",
+            "fields": {
+                "summary": "Results Grid - UI",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "2d",
+                    "remainingEstimate": "2d",
+                    "originalEstimateSeconds": 57600,
+                    "remainingEstimateSeconds": 57600
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Maciej"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10004",
+                    "description": "Having been selected for the current sprint, the assignee is now working on the task.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Dev in Progress",
+                    "id": "10004",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/4",
+                        "id": 4,
+                        "key": "indeterminate",
+                        "colorName": "yellow",
+                        "name": "In Progress"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14582",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14582",
+            "key": "MVPD1-1235",
+            "fields": {
+                "summary": "Search Form - UI",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "2d",
+                    "remainingEstimate": "1d 4h",
+                    "timeSpent": "4h",
+                    "originalEstimateSeconds": 57600,
+                    "remainingEstimateSeconds": 43200,
+                    "timeSpentSeconds": 14400
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Maciej"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10004",
+                    "description": "Having been selected for the current sprint, the assignee is now working on the task.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Dev in Progress",
+                    "id": "10004",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/4",
+                        "id": 4,
+                        "key": "indeterminate",
+                        "colorName": "yellow",
+                        "name": "In Progress"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14581",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14581",
+            "key": "MVPD1-1234",
+            "fields": {
+                "summary": "UBO - Worklist - Case Search",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Maciej"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10002",
+                    "description": "Tasks are defined, clarified and agreed by the Development team and contribute to a User Story. Tasks are done when they are \"DEV COMPLETE\", but the parent user story only moves in to UAT when all it's tasks are done. A task may be completely defined by one user, but often a task requires a mixture of stakeholder and development expertise to contribute to and refine the content prior to the task being in a fit state for development work to commence.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Definition",
+                    "id": "10002",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14576",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14576",
+            "key": "MVPD1-1229",
+            "fields": {
+                "summary": "Service implementation",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "1d",
+                    "remainingEstimate": "1d",
+                    "originalEstimateSeconds": 28800,
+                    "remainingEstimateSeconds": 28800
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Kasia"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10002",
+                    "description": "Tasks are defined, clarified and agreed by the Development team and contribute to a User Story. Tasks are done when they are \"DEV COMPLETE\", but the parent user story only moves in to UAT when all it's tasks are done. A task may be completely defined by one user, but often a task requires a mixture of stakeholder and development expertise to contribute to and refine the content prior to the task being in a fit state for development work to commence.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Definition",
+                    "id": "10002",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
             }
         },
         {
@@ -31,6 +395,7 @@
             "self": "https://orwell.atlassian.net/rest/api/2/issue/14572",
             "key": "MVPD1-1227",
             "fields": {
+                "summary": "INFRA - PAYMENTS - Business Configuration Setup - Correspondent Banks, Countries, Currencies, Nostro Accounts etc.",
                 "priority": {
                     "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
                     "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
@@ -46,7 +411,455 @@
                 "labels": [
                     "jmp",
                     "jmp-stream-Bart"
-                ]
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10002",
+                    "description": "Tasks are defined, clarified and agreed by the Development team and contribute to a User Story. Tasks are done when they are \"DEV COMPLETE\", but the parent user story only moves in to UAT when all it's tasks are done. A task may be completely defined by one user, but often a task requires a mixture of stakeholder and development expertise to contribute to and refine the content prior to the task being in a fit state for development work to commence.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Definition",
+                    "id": "10002",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14570",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14570",
+            "key": "MVPD1-1225",
+            "fields": {
+                "summary": "Integration and Mappers",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "4h",
+                    "remainingEstimate": "4h",
+                    "originalEstimateSeconds": 14400,
+                    "remainingEstimateSeconds": 14400
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Adam"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10002",
+                    "description": "Tasks are defined, clarified and agreed by the Development team and contribute to a User Story. Tasks are done when they are \"DEV COMPLETE\", but the parent user story only moves in to UAT when all it's tasks are done. A task may be completely defined by one user, but often a task requires a mixture of stakeholder and development expertise to contribute to and refine the content prior to the task being in a fit state for development work to commence.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Definition",
+                    "id": "10002",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14569",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14569",
+            "key": "MVPD1-1224",
+            "fields": {
+                "summary": "Data Access",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "1d",
+                    "remainingEstimate": "1d",
+                    "originalEstimateSeconds": 28800,
+                    "remainingEstimateSeconds": 28800
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Adam"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10002",
+                    "description": "Tasks are defined, clarified and agreed by the Development team and contribute to a User Story. Tasks are done when they are \"DEV COMPLETE\", but the parent user story only moves in to UAT when all it's tasks are done. A task may be completely defined by one user, but often a task requires a mixture of stakeholder and development expertise to contribute to and refine the content prior to the task being in a fit state for development work to commence.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Definition",
+                    "id": "10002",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14568",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14568",
+            "key": "MVPD1-1223",
+            "fields": {
+                "summary": "Liquidity Manager - Integration",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Adam"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10002",
+                    "description": "Tasks are defined, clarified and agreed by the Development team and contribute to a User Story. Tasks are done when they are \"DEV COMPLETE\", but the parent user story only moves in to UAT when all it's tasks are done. A task may be completely defined by one user, but often a task requires a mixture of stakeholder and development expertise to contribute to and refine the content prior to the task being in a fit state for development work to commence.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Definition",
+                    "id": "10002",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14567",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14567",
+            "key": "MVPD1-1222",
+            "fields": {
+                "summary": "Change UBO Client webservice to REST",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "2d",
+                    "remainingEstimate": "2d",
+                    "originalEstimateSeconds": 57600,
+                    "remainingEstimateSeconds": 57600
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Adam"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10002",
+                    "description": "Tasks are defined, clarified and agreed by the Development team and contribute to a User Story. Tasks are done when they are \"DEV COMPLETE\", but the parent user story only moves in to UAT when all it's tasks are done. A task may be completely defined by one user, but often a task requires a mixture of stakeholder and development expertise to contribute to and refine the content prior to the task being in a fit state for development work to commence.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Definition",
+                    "id": "10002",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14565",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14565",
+            "key": "MVPD1-1220",
+            "fields": {
+                "summary": "Check for breaking changes after Angular Bootstrap upgrade",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "2h",
+                    "remainingEstimate": "0m",
+                    "timeSpent": "1h",
+                    "originalEstimateSeconds": 7200,
+                    "remainingEstimateSeconds": 0,
+                    "timeSpentSeconds": 3600
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Maciej"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10006",
+                    "description": "Development complete, unit tests in place, development testing complete. Code is now awaiting peer review.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Ready for Review",
+                    "id": "10006",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14564",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14564",
+            "key": "MVPD1-1219",
+            "fields": {
+                "summary": "Remove outline from all hyperlinks",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "1h",
+                    "remainingEstimate": "0m",
+                    "timeSpent": "1h",
+                    "originalEstimateSeconds": 3600,
+                    "remainingEstimateSeconds": 0,
+                    "timeSpentSeconds": 3600
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Adam"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10006",
+                    "description": "Development complete, unit tests in place, development testing complete. Code is now awaiting peer review.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Ready for Review",
+                    "id": "10006",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14561",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14561",
+            "key": "MVPD1-1216",
+            "fields": {
+                "summary": "Deploy UBO mock service",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "3h",
+                    "remainingEstimate": "0m",
+                    "originalEstimateSeconds": 10800,
+                    "remainingEstimateSeconds": 0
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Adam"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10101",
+                    "description": "A cancellation request may be requested if an issue is deemed to have been raised incorrectly or has been superseded by other work.\n\nA clear explanation must be given as to why the REQUEST TO CANCEL has been issued, and needs to be signed off to confirm it as CANCELLED.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Request to Cancel",
+                    "id": "10101",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14560",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14560",
+            "key": "MVPD1-1215",
+            "fields": {
+                "summary": "Expose Unity MOCK/PROD configuration to UBO Service web.config",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "2h",
+                    "remainingEstimate": "0m",
+                    "originalEstimateSeconds": 7200,
+                    "remainingEstimateSeconds": 0
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Adam"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10101",
+                    "description": "A cancellation request may be requested if an issue is deemed to have been raised incorrectly or has been superseded by other work.\n\nA clear explanation must be given as to why the REQUEST TO CANCEL has been issued, and needs to be signed off to confirm it as CANCELLED.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Request to Cancel",
+                    "id": "10101",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14558",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14558",
+            "key": "MVPD1-1213",
+            "fields": {
+                "summary": "JSON lowercase",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "6h",
+                    "remainingEstimate": "6h",
+                    "originalEstimateSeconds": 21600,
+                    "remainingEstimateSeconds": 21600
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Kasia"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10002",
+                    "description": "Tasks are defined, clarified and agreed by the Development team and contribute to a User Story. Tasks are done when they are \"DEV COMPLETE\", but the parent user story only moves in to UAT when all it's tasks are done. A task may be completely defined by one user, but often a task requires a mixture of stakeholder and development expertise to contribute to and refine the content prior to the task being in a fit state for development work to commence.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Definition",
+                    "id": "10002",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14557",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14557",
+            "key": "MVPD1-1212",
+            "fields": {
+                "summary": "Case Shell Refactor",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "6h",
+                    "remainingEstimate": "2h",
+                    "timeSpent": "4h",
+                    "originalEstimateSeconds": 21600,
+                    "remainingEstimateSeconds": 7200,
+                    "timeSpentSeconds": 14400
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Kasia"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10006",
+                    "description": "Development complete, unit tests in place, development testing complete. Code is now awaiting peer review.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Ready for Review",
+                    "id": "10006",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14556",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14556",
+            "key": "MVPD1-1211",
+            "fields": {
+                "summary": "UBO Solution Refactoring",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "3d",
+                    "remainingEstimate": "2d 3h",
+                    "timeSpent": "5h",
+                    "originalEstimateSeconds": 86400,
+                    "remainingEstimateSeconds": 68400,
+                    "timeSpentSeconds": 18000
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Kasia"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10006",
+                    "description": "Development complete, unit tests in place, development testing complete. Code is now awaiting peer review.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Ready for Review",
+                    "id": "10006",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
             }
         },
         {
@@ -55,6 +868,7 @@
             "self": "https://orwell.atlassian.net/rest/api/2/issue/14555",
             "key": "MVPD1-1210",
             "fields": {
+                "summary": "Event Service Infrastructure - Tidy Up",
                 "priority": {
                     "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
                     "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
@@ -70,290 +884,30 @@
                 "labels": [
                     "jmp",
                     "jmp-stream-Bart"
-                ]
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10002",
+                    "description": "Tasks are defined, clarified and agreed by the Development team and contribute to a User Story. Tasks are done when they are \"DEV COMPLETE\", but the parent user story only moves in to UAT when all it's tasks are done. A task may be completely defined by one user, but often a task requires a mixture of stakeholder and development expertise to contribute to and refine the content prior to the task being in a fit state for development work to commence.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Definition",
+                    "id": "10002",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
             }
         },
         {
             "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
-            "id": "13612",
-            "self": "https://orwell.atlassian.net/rest/api/2/issue/13612",
-            "key": "MVPD1-811",
+            "id": "14554",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14554",
+            "key": "MVPD1-1209",
             "fields": {
-                "priority": {
-                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
-                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
-                    "name": "Medium",
-                    "id": "3"
-                },
-                "timetracking": {
-                    "originalEstimate": "4d",
-                    "remainingEstimate": "4d",
-                    "originalEstimateSeconds": 115200,
-                    "remainingEstimateSeconds": 115200
-                },
-                "labels": [
-                    "jmp",
-                    "jmp-stream-Bart"
-                ]
-            }
-        },
-        {
-            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
-            "id": "13597",
-            "self": "https://orwell.atlassian.net/rest/api/2/issue/13597",
-            "key": "MVPD1-796",
-            "fields": {
-                "priority": {
-                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
-                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
-                    "name": "Medium",
-                    "id": "3"
-                },
-                "timetracking": {
-                    "originalEstimate": "1d",
-                    "remainingEstimate": "2h",
-                    "timeSpent": "6h",
-                    "originalEstimateSeconds": 28800,
-                    "remainingEstimateSeconds": 7200,
-                    "timeSpentSeconds": 21600
-                },
-                "labels": [
-                    "jmp",
-                    "jmp-stream-Bart"
-                ]
-            }
-        },
-        {
-            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
-            "id": "13596",
-            "self": "https://orwell.atlassian.net/rest/api/2/issue/13596",
-            "key": "MVPD1-795",
-            "fields": {
-                "priority": {
-                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
-                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
-                    "name": "Medium",
-                    "id": "3"
-                },
-                "timetracking": {
-                    "originalEstimate": "1d",
-                    "remainingEstimate": "2h",
-                    "timeSpent": "6h",
-                    "originalEstimateSeconds": 28800,
-                    "remainingEstimateSeconds": 7200,
-                    "timeSpentSeconds": 21600
-                },
-                "labels": [
-                    "jmp",
-                    "jmp-stream-Bart"
-                ]
-            }
-        },
-        {
-            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
-            "id": "13595",
-            "self": "https://orwell.atlassian.net/rest/api/2/issue/13595",
-            "key": "MVPD1-794",
-            "fields": {
-                "priority": {
-                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
-                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
-                    "name": "Medium",
-                    "id": "3"
-                },
-                "timetracking": {
-                    "originalEstimate": "1w",
-                    "remainingEstimate": "2h",
-                    "timeSpent": "2d 6h",
-                    "originalEstimateSeconds": 144000,
-                    "remainingEstimateSeconds": 7200,
-                    "timeSpentSeconds": 79200
-                },
-                "labels": [
-                    "jmp",
-                    "jmp-stream-Bart"
-                ]
-            }
-        },
-        {
-            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
-            "id": "13527",
-            "self": "https://orwell.atlassian.net/rest/api/2/issue/13527",
-            "key": "MVPD1-726",
-            "fields": {
-                "priority": {
-                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
-                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
-                    "name": "Medium",
-                    "id": "3"
-                },
-                "timetracking": {
-                    "originalEstimate": "0m",
-                    "remainingEstimate": "1h",
-                    "timeSpent": "7h",
-                    "originalEstimateSeconds": 0,
-                    "remainingEstimateSeconds": 3600,
-                    "timeSpentSeconds": 25200
-                },
-                "labels": [
-                    "jmp",
-                    "jmp-stream-Bart"
-                ]
-            }
-        },
-        {
-            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
-            "id": "13526",
-            "self": "https://orwell.atlassian.net/rest/api/2/issue/13526",
-            "key": "MVPD1-725",
-            "fields": {
-                "priority": {
-                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
-                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
-                    "name": "Medium",
-                    "id": "3"
-                },
-                "timetracking": {
-                    "originalEstimate": "0m",
-                    "remainingEstimate": "1h",
-                    "timeSpent": "7h",
-                    "originalEstimateSeconds": 0,
-                    "remainingEstimateSeconds": 3600,
-                    "timeSpentSeconds": 25200
-                },
-                "labels": [
-                    "jmp",
-                    "jmp-stream-Bart"
-                ]
-            }
-        },
-        {
-            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
-            "id": "13342",
-            "self": "https://orwell.atlassian.net/rest/api/2/issue/13342",
-            "key": "MVPD1-541",
-            "fields": {
-                "priority": {
-                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
-                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
-                    "name": "Medium",
-                    "id": "3"
-                },
-                "timetracking": {
-                    "originalEstimate": "1w",
-                    "remainingEstimate": "0m",
-                    "timeSpent": "2d 2h",
-                    "originalEstimateSeconds": 144000,
-                    "remainingEstimateSeconds": 0,
-                    "timeSpentSeconds": 64800
-                },
-                "labels": [
-                    "jmp",
-                    "jmp-stream-Bart"
-                ]
-            }
-        },
-        {
-            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
-            "id": "12325",
-            "self": "https://orwell.atlassian.net/rest/api/2/issue/12325",
-            "key": "MVP-340",
-            "fields": {
-                "priority": {
-                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
-                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
-                    "name": "Medium",
-                    "id": "3"
-                },
-                "timetracking": {
-                    "remainingEstimate": "0m",
-                    "timeSpent": "1w 3d",
-                    "remainingEstimateSeconds": 0,
-                    "timeSpentSeconds": 230400
-                },
-                "labels": [
-                    "jmp",
-                    "jmp-stream-Bart",
-                    "obsolete"
-                ]
-            }
-        },
-        {
-            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
-            "id": "11732",
-            "self": "https://orwell.atlassian.net/rest/api/2/issue/11732",
-            "key": "MVP-72",
-            "fields": {
-                "priority": {
-                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
-                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
-                    "name": "Medium",
-                    "id": "3"
-                },
-                "timetracking": {
-
-                },
-                "labels": [
-                    "Mobile",
-                    "jmp",
-                    "jmp-stream-Bart",
-                    "mvpd1"
-                ]
-            }
-        },
-        {
-            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
-            "id": "11731",
-            "self": "https://orwell.atlassian.net/rest/api/2/issue/11731",
-            "key": "MVP-71",
-            "fields": {
-                "priority": {
-                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
-                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
-                    "name": "Medium",
-                    "id": "3"
-                },
-                "timetracking": {
-
-                },
-                "labels": [
-                    "Mobile",
-                    "jmp",
-                    "jmp-stream-Bart",
-                    "mvpd1"
-                ]
-            }
-        },
-        {
-            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
-            "id": "11601",
-            "self": "https://orwell.atlassian.net/rest/api/2/issue/11601",
-            "key": "MVP-2",
-            "fields": {
-                "priority": {
-                    "self": "https://orwell.atlassian.net/rest/api/2/priority/2",
-                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/high.svg",
-                    "name": "High",
-                    "id": "2"
-                },
-                "timetracking": {
-
-                },
-                "labels": [
-                    "Infrastucture",
-                    "infra",
-                    "jmp",
-                    "jmp-stream-Bart",
-                    "mvpd1"
-                ]
-            }
-        },
-        {
-            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
-            "id": "11330",
-            "self": "https://orwell.atlassian.net/rest/api/2/issue/11330",
-            "key": "ENT-146",
-            "fields": {
+                "summary": "INFRA - Grunt build process improvements",
                 "priority": {
                     "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
                     "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
@@ -363,15 +917,1061 @@
                 "timetracking": {
                     "originalEstimate": "6h",
                     "remainingEstimate": "0m",
-                    "timeSpent": "6h",
+                    "timeSpent": "1d 4h",
                     "originalEstimateSeconds": 21600,
+                    "remainingEstimateSeconds": 0,
+                    "timeSpentSeconds": 43200
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Adam"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10004",
+                    "description": "Having been selected for the current sprint, the assignee is now working on the task.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Dev in Progress",
+                    "id": "10004",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/4",
+                        "id": 4,
+                        "key": "indeterminate",
+                        "colorName": "yellow",
+                        "name": "In Progress"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14438",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14438",
+            "key": "MVPD1-1159",
+            "fields": {
+                "summary": "Localisation",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "2h",
+                    "remainingEstimate": "1h",
+                    "timeSpent": "1h",
+                    "originalEstimateSeconds": 7200,
+                    "remainingEstimateSeconds": 3600,
+                    "timeSpentSeconds": 3600
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Adam"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10004",
+                    "description": "Having been selected for the current sprint, the assignee is now working on the task.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Dev in Progress",
+                    "id": "10004",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/4",
+                        "id": 4,
+                        "key": "indeterminate",
+                        "colorName": "yellow",
+                        "name": "In Progress"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14408",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14408",
+            "key": "MVPD1-1148",
+            "fields": {
+                "summary": "Configurable Mock User Groups",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "remainingEstimate": "0m",
+                    "timeSpent": "2h",
+                    "remainingEstimateSeconds": 0,
+                    "timeSpentSeconds": 7200
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Kasia"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10102",
+                    "description": "Development has been completed and reviewed. When all tasks for the parent user story have been completed then the user story can be moved to UAT.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "DEV COMPLETE",
+                    "id": "10102",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/3",
+                        "id": 3,
+                        "key": "done",
+                        "colorName": "green",
+                        "name": "Done"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14267",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14267",
+            "key": "MVPD1-1107",
+            "fields": {
+                "summary": "UBO Wireframes",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "0m",
+                    "remainingEstimate": "0m",
+                    "timeSpent": "2h",
+                    "originalEstimateSeconds": 0,
+                    "remainingEstimateSeconds": 0,
+                    "timeSpentSeconds": 7200
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Adam"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10102",
+                    "description": "Development has been completed and reviewed. When all tasks for the parent user story have been completed then the user story can be moved to UAT.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "DEV COMPLETE",
+                    "id": "10102",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/3",
+                        "id": 3,
+                        "key": "done",
+                        "colorName": "green",
+                        "name": "Done"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14266",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14266",
+            "key": "MVPD1-1106",
+            "fields": {
+                "summary": "Planning D1",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "remainingEstimate": "0m",
+                    "timeSpent": "3d 4h",
+                    "remainingEstimateSeconds": 0,
+                    "timeSpentSeconds": 100800
+                },
+                "labels": [
+                    "jmp"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10102",
+                    "description": "Development has been completed and reviewed. When all tasks for the parent user story have been completed then the user story can be moved to UAT.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "DEV COMPLETE",
+                    "id": "10102",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/3",
+                        "id": 3,
+                        "key": "done",
+                        "colorName": "green",
+                        "name": "Done"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14264",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14264",
+            "key": "MVPD1-1105",
+            "fields": {
+                "summary": "Interview Support",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "remainingEstimate": "0m",
+                    "timeSpent": "1d 4h 30m",
+                    "remainingEstimateSeconds": 0,
+                    "timeSpentSeconds": 45000
+                },
+                "labels": [
+                    "jmp"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10102",
+                    "description": "Development has been completed and reviewed. When all tasks for the parent user story have been completed then the user story can be moved to UAT.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "DEV COMPLETE",
+                    "id": "10102",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/3",
+                        "id": 3,
+                        "key": "done",
+                        "colorName": "green",
+                        "name": "Done"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14247",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14247",
+            "key": "MVPD1-1089",
+            "fields": {
+                "summary": "DB Structure",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "1d",
+                    "remainingEstimate": "0m",
+                    "timeSpent": "6h",
+                    "originalEstimateSeconds": 28800,
                     "remainingEstimateSeconds": 0,
                     "timeSpentSeconds": 21600
                 },
                 "labels": [
                     "jmp",
-                    "jmp-stream-Bart"
-                ]
+                    "jmp-stream-Maciej"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10006",
+                    "description": "Development complete, unit tests in place, development testing complete. Code is now awaiting peer review.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Ready for Review",
+                    "id": "10006",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14246",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14246",
+            "key": "MVPD1-1088",
+            "fields": {
+                "summary": "Sprint Capacity Placeholder - Tom",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "3d",
+                    "remainingEstimate": "0m",
+                    "originalEstimateSeconds": 86400,
+                    "remainingEstimateSeconds": 0
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Tom"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10102",
+                    "description": "Development has been completed and reviewed. When all tasks for the parent user story have been completed then the user story can be moved to UAT.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "DEV COMPLETE",
+                    "id": "10102",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/3",
+                        "id": 3,
+                        "key": "done",
+                        "colorName": "green",
+                        "name": "Done"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14245",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14245",
+            "key": "MVPD1-1087",
+            "fields": {
+                "summary": "Data Models",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "2h",
+                    "remainingEstimate": "0m",
+                    "timeSpent": "2h",
+                    "originalEstimateSeconds": 7200,
+                    "remainingEstimateSeconds": 0,
+                    "timeSpentSeconds": 7200
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Kasia"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10102",
+                    "description": "Development has been completed and reviewed. When all tasks for the parent user story have been completed then the user story can be moved to UAT.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "DEV COMPLETE",
+                    "id": "10102",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/3",
+                        "id": 3,
+                        "key": "done",
+                        "colorName": "green",
+                        "name": "Done"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14244",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14244",
+            "key": "MVPD1-1086",
+            "fields": {
+                "summary": "Service Implementation",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "6h",
+                    "remainingEstimate": "0m",
+                    "timeSpent": "1d 3h",
+                    "originalEstimateSeconds": 21600,
+                    "remainingEstimateSeconds": 0,
+                    "timeSpentSeconds": 39600
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Kasia"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10102",
+                    "description": "Development has been completed and reviewed. When all tasks for the parent user story have been completed then the user story can be moved to UAT.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "DEV COMPLETE",
+                    "id": "10102",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/3",
+                        "id": 3,
+                        "key": "done",
+                        "colorName": "green",
+                        "name": "Done"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14243",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14243",
+            "key": "MVPD1-1085",
+            "fields": {
+                "summary": "Mock Service",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "2h",
+                    "remainingEstimate": "0m",
+                    "timeSpent": "2h",
+                    "originalEstimateSeconds": 7200,
+                    "remainingEstimateSeconds": 0,
+                    "timeSpentSeconds": 7200
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Kasia"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10102",
+                    "description": "Development has been completed and reviewed. When all tasks for the parent user story have been completed then the user story can be moved to UAT.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "DEV COMPLETE",
+                    "id": "10102",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/3",
+                        "id": 3,
+                        "key": "done",
+                        "colorName": "green",
+                        "name": "Done"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14242",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14242",
+            "key": "MVPD1-1084",
+            "fields": {
+                "summary": "API Definition",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "2h",
+                    "remainingEstimate": "0m",
+                    "timeSpent": "2h",
+                    "originalEstimateSeconds": 7200,
+                    "remainingEstimateSeconds": 0,
+                    "timeSpentSeconds": 7200
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Kasia"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10102",
+                    "description": "Development has been completed and reviewed. When all tasks for the parent user story have been completed then the user story can be moved to UAT.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "DEV COMPLETE",
+                    "id": "10102",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/3",
+                        "id": 3,
+                        "key": "done",
+                        "colorName": "green",
+                        "name": "Done"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14241",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14241",
+            "key": "MVPD1-1083",
+            "fields": {
+                "summary": "Entitlement Service - Backend",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+
+                },
+                "labels": [
+                    "jmp"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10102",
+                    "description": "Development has been completed and reviewed. When all tasks for the parent user story have been completed then the user story can be moved to UAT.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "DEV COMPLETE",
+                    "id": "10102",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/3",
+                        "id": 3,
+                        "key": "done",
+                        "colorName": "green",
+                        "name": "Done"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14240",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14240",
+            "key": "MVPD1-1082",
+            "fields": {
+                "summary": "Sprint Capacity Placeholder - Bart",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "0m",
+                    "remainingEstimate": "0m",
+                    "originalEstimateSeconds": 0,
+                    "remainingEstimateSeconds": 0
+                },
+                "labels": [
+                    "jmp"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10101",
+                    "description": "A cancellation request may be requested if an issue is deemed to have been raised incorrectly or has been superseded by other work.\n\nA clear explanation must be given as to why the REQUEST TO CANCEL has been issued, and needs to be signed off to confirm it as CANCELLED.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Request to Cancel",
+                    "id": "10101",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14239",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14239",
+            "key": "MVPD1-1081",
+            "fields": {
+                "summary": "Common Case Actions",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "2d",
+                    "remainingEstimate": "5h",
+                    "timeSpent": "1d 3h",
+                    "originalEstimateSeconds": 57600,
+                    "remainingEstimateSeconds": 18000,
+                    "timeSpentSeconds": 39600
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Kasia"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10004",
+                    "description": "Having been selected for the current sprint, the assignee is now working on the task.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Dev in Progress",
+                    "id": "10004",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/4",
+                        "id": 4,
+                        "key": "indeterminate",
+                        "colorName": "yellow",
+                        "name": "In Progress"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14237",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14237",
+            "key": "MVPD1-1079",
+            "fields": {
+                "summary": "Actions",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "1d",
+                    "remainingEstimate": "1d",
+                    "originalEstimateSeconds": 28800,
+                    "remainingEstimateSeconds": 28800
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Kasia"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10002",
+                    "description": "Tasks are defined, clarified and agreed by the Development team and contribute to a User Story. Tasks are done when they are \"DEV COMPLETE\", but the parent user story only moves in to UAT when all it's tasks are done. A task may be completely defined by one user, but often a task requires a mixture of stakeholder and development expertise to contribute to and refine the content prior to the task being in a fit state for development work to commence.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Definition",
+                    "id": "10002",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14236",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14236",
+            "key": "MVPD1-1078",
+            "fields": {
+                "summary": "Change Velocity Limits",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "6h",
+                    "remainingEstimate": "6h",
+                    "originalEstimateSeconds": 21600,
+                    "remainingEstimateSeconds": 21600
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Kasia"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10002",
+                    "description": "Tasks are defined, clarified and agreed by the Development team and contribute to a User Story. Tasks are done when they are \"DEV COMPLETE\", but the parent user story only moves in to UAT when all it's tasks are done. A task may be completely defined by one user, but often a task requires a mixture of stakeholder and development expertise to contribute to and refine the content prior to the task being in a fit state for development work to commence.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Definition",
+                    "id": "10002",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14235",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14235",
+            "key": "MVPD1-1077",
+            "fields": {
+                "summary": "Velocity Limits Panel",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "0m",
+                    "remainingEstimate": "0m",
+                    "originalEstimateSeconds": 0,
+                    "remainingEstimateSeconds": 0
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Kasia"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10101",
+                    "description": "A cancellation request may be requested if an issue is deemed to have been raised incorrectly or has been superseded by other work.\n\nA clear explanation must be given as to why the REQUEST TO CANCEL has been issued, and needs to be signed off to confirm it as CANCELLED.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Request to Cancel",
+                    "id": "10101",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14234",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14234",
+            "key": "MVPD1-1076",
+            "fields": {
+                "summary": "Mock Service",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "1d",
+                    "remainingEstimate": "1d",
+                    "originalEstimateSeconds": 28800,
+                    "remainingEstimateSeconds": 28800
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Kasia"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10002",
+                    "description": "Tasks are defined, clarified and agreed by the Development team and contribute to a User Story. Tasks are done when they are \"DEV COMPLETE\", but the parent user story only moves in to UAT when all it's tasks are done. A task may be completely defined by one user, but often a task requires a mixture of stakeholder and development expertise to contribute to and refine the content prior to the task being in a fit state for development work to commence.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Definition",
+                    "id": "10002",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14233",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14233",
+            "key": "MVPD1-1075",
+            "fields": {
+                "summary": "Transaction Details",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "1d",
+                    "remainingEstimate": "0m",
+                    "timeSpent": "1d 2h",
+                    "originalEstimateSeconds": 28800,
+                    "remainingEstimateSeconds": 0,
+                    "timeSpentSeconds": 36000
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Kasia"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10006",
+                    "description": "Development complete, unit tests in place, development testing complete. Code is now awaiting peer review.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Ready for Review",
+                    "id": "10006",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14232",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14232",
+            "key": "MVPD1-1074",
+            "fields": {
+                "summary": "Shell",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "4h",
+                    "remainingEstimate": "1h",
+                    "timeSpent": "4h",
+                    "originalEstimateSeconds": 14400,
+                    "remainingEstimateSeconds": 3600,
+                    "timeSpentSeconds": 14400
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Kasia"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10004",
+                    "description": "Having been selected for the current sprint, the assignee is now working on the task.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Dev in Progress",
+                    "id": "10004",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/4",
+                        "id": 4,
+                        "key": "indeterminate",
+                        "colorName": "yellow",
+                        "name": "In Progress"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14230",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14230",
+            "key": "MVPD1-1072",
+            "fields": {
+                "summary": "AML Velocity Limits Alert UI",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Kasia"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10002",
+                    "description": "Tasks are defined, clarified and agreed by the Development team and contribute to a User Story. Tasks are done when they are \"DEV COMPLETE\", but the parent user story only moves in to UAT when all it's tasks are done. A task may be completely defined by one user, but often a task requires a mixture of stakeholder and development expertise to contribute to and refine the content prior to the task being in a fit state for development work to commence.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Definition",
+                    "id": "10002",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14229",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14229",
+            "key": "MVPD1-1071",
+            "fields": {
+                "summary": "Mock Service",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "1d 4h",
+                    "remainingEstimate": "0m",
+                    "timeSpent": "2d 6h",
+                    "originalEstimateSeconds": 43200,
+                    "remainingEstimateSeconds": 0,
+                    "timeSpentSeconds": 79200
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Adam"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10006",
+                    "description": "Development complete, unit tests in place, development testing complete. Code is now awaiting peer review.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Ready for Review",
+                    "id": "10006",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14228",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14228",
+            "key": "MVPD1-1070",
+            "fields": {
+                "summary": "Route to transaction monitor",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "4h",
+                    "remainingEstimate": "0m",
+                    "timeSpent": "4h",
+                    "originalEstimateSeconds": 14400,
+                    "remainingEstimateSeconds": 0,
+                    "timeSpentSeconds": 14400
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Adam"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10102",
+                    "description": "Development has been completed and reviewed. When all tasks for the parent user story have been completed then the user story can be moved to UAT.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "DEV COMPLETE",
+                    "id": "10102",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/3",
+                        "id": 3,
+                        "key": "done",
+                        "colorName": "green",
+                        "name": "Done"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14227",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14227",
+            "key": "MVPD1-1069",
+            "fields": {
+                "summary": "Cell templates",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "1d",
+                    "remainingEstimate": "0m",
+                    "timeSpent": "1d",
+                    "originalEstimateSeconds": 28800,
+                    "remainingEstimateSeconds": 0,
+                    "timeSpentSeconds": 28800
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Adam"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10102",
+                    "description": "Development has been completed and reviewed. When all tasks for the parent user story have been completed then the user story can be moved to UAT.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "DEV COMPLETE",
+                    "id": "10102",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/3",
+                        "id": 3,
+                        "key": "done",
+                        "colorName": "green",
+                        "name": "Done"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14226",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14226",
+            "key": "MVPD1-1068",
+            "fields": {
+                "summary": "Template Selector",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "0m",
+                    "remainingEstimate": "0m",
+                    "originalEstimateSeconds": 0,
+                    "remainingEstimateSeconds": 0
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Adam"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10101",
+                    "description": "A cancellation request may be requested if an issue is deemed to have been raised incorrectly or has been superseded by other work.\n\nA clear explanation must be given as to why the REQUEST TO CANCEL has been issued, and needs to be signed off to confirm it as CANCELLED.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Request to Cancel",
+                    "id": "10101",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields",
+            "id": "14225",
+            "self": "https://orwell.atlassian.net/rest/api/2/issue/14225",
+            "key": "MVPD1-1067",
+            "fields": {
+                "summary": "Grid Contol",
+                "priority": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/priority/3",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "timetracking": {
+                    "originalEstimate": "1d",
+                    "remainingEstimate": "0m",
+                    "timeSpent": "1d",
+                    "originalEstimateSeconds": 28800,
+                    "remainingEstimateSeconds": 0,
+                    "timeSpentSeconds": 28800
+                },
+                "labels": [
+                    "jmp",
+                    "jmp-stream-Adam"
+                ],
+                "status": {
+                    "self": "https://orwell.atlassian.net/rest/api/2/status/10102",
+                    "description": "Development has been completed and reviewed. When all tasks for the parent user story have been completed then the user story can be moved to UAT.",
+                    "iconUrl": "https://orwell.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "DEV COMPLETE",
+                    "id": "10102",
+                    "statusCategory": {
+                        "self": "https://orwell.atlassian.net/rest/api/2/statuscategory/3",
+                        "id": 3,
+                        "key": "done",
+                        "colorName": "green",
+                        "name": "Done"
+                    }
+                }
             }
         }
     ]

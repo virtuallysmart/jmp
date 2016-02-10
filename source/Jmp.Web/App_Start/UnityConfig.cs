@@ -39,9 +39,9 @@ namespace Jmp.Web.App_Start
             var defaultReportSetup = new ReportSetup()
             {
                 JiraApiUrl = "https://orwell.atlassian.net/rest/api/2/",
-                IncludeLabel = "jmp",
-                ColumnNamePrefix = "jmp-stream-",
-                ColumnUnassignedLabel = "Unassigned"
+                JiraBrowseUrl = "https://orwell.atlassian.net/browse/",
+                Jql = "project=MVPD1",
+                ColumnLabelPrefix = "jmp-stream-"
             };
 
             container.RegisterInstance<ReportSetup>(defaultReportSetup, new ContainerControlledLifetimeManager());

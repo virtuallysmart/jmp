@@ -21,19 +21,15 @@ namespace Jmp.Console
                 JiraApiUrl = "https://orwell.atlassian.net/rest/api/2/",
                 JiraUserName = "YOUR USER HERE",
                 JiraPassword = "YOUR PASSWORD HERE",
-                IncludeLabel = "jmp",
-                ColumnNamePrefix = "jmp-stream-",
-                ColumnUnassignedLabel = "Unassigned"
+                Jql = "labels=jmp",
+                ColumnLabelPrefix = "jmp-stream-"
             };
 
             var jiraClient = new JiraClient();
-            var issues = jiraClient.GetIssues(setup.JiraApiUrl, setup.JiraUserName, setup.JiraPassword, setup.IncludeLabel);
+            var issues = jiraClient.GetIssues(setup.JiraApiUrl, setup.JiraUserName, setup.JiraPassword, setup.Jql);
 
-            var capacityService = new MockCapacityService();
-            var capacity = capacityService.GetWeeklyCapacityByStream();
-
-            var reportService = new ReportService();
-            var report = reportService.GetReportData(issues, setup.ColumnNamePrefix, setup.ColumnUnassignedLabel, capacity);
+            var reportService = new ReportService(new MockCapacityService());
+            var report = reportService.GetReportData(issues, setup.ColumnLabelPrefix);
         }
 
         public class ReportSetup
@@ -44,9 +40,9 @@ namespace Jmp.Console
 
             public string JiraPassword { get; set; }
 
-            public string IncludeLabel { get; set; }
+            public string Jql { get; set; }
 
-            public string ColumnNamePrefix { get; set; }
+            public string ColumnLabelPrefix { get; set; }
 
             public string ColumnUnassignedLabel { get; set; }
         }

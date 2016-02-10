@@ -8,13 +8,9 @@ namespace Jmp.Capacity
 {
     public class MockCapacityService : ICapacityService
     {
-        public IDictionary<string, double> GetWeeklyCapacityByStream()
+        public long GetWeeklyCapacitySeconds(string stream)
         {
-            var capacity = new Dictionary<string, double>()
-            {
-                { "Bart", 30 }
-            };
-            return capacity;
+            return 40 * 60 * 60;
         }
     }
 }

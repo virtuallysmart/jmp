@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Jmp.Capacity
+namespace Jmp.Jira
 {
-    public interface ICapacityService
+    public class StatusCategory
     {
-        long GetWeeklyCapacitySeconds(string stream);
+        public string ColorName { get; set; }
     }
 }
