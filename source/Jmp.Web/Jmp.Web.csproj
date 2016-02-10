@@ -150,6 +150,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\github.png" />
     <Content Include="Content\vs18black.png" />
     <Content Include="Content\vs90white.png" />
     <Content Include="favicon.ico" />
