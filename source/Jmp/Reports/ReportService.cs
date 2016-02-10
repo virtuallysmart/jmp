@@ -11,30 +11,28 @@ namespace Jmp.Reports
 {
     public class ReportService : IReportService
     {
-        private readonly string[] _issueFinalStatuses = new string[] { "DEV COMPLETE", "CANCELLED" };
-
-        public ReportData GetReportData(Issue[] issues, string columnLabelPrefix, IDictionary<string, int> weeklyCapacityHoursPerStream)
+        public ReportData GetReportData(Issue[] issues, string columnLabelPrefix, IDictionary<string, int> weeklyCapacityHoursPerStream, string[] issueFinalStatuses)
         {
             var reportData = new ReportData();
 
-            var checkClosedWithEstimateCount = issues.Count(i => CheckClosedWithEstimate(i));
+            var checkClosedWithEstimateCount = issues.Count(i => CheckClosedWithEstimate(i, issueFinalStatuses));
             if (checkClosedWithEstimateCount > 0)
             {
                 reportData.Warnings.Add(string.Format("There are {0} closed issues with remaining estimate in the dataset. They have not been included in the report.", checkClosedWithEstimateCount));
             }
 
-            var openIssues = issues.Where(i => !_issueFinalStatuses.Any(s => s.Equals(i.Fields.Status.Name, StringComparison.InvariantCultureIgnoreCase))).ToArray();
+            var openIssues = issues.Where(i => !issueFinalStatuses.Any(s => s.Equals(i.Fields.Status.Name, StringComparison.InvariantCultureIgnoreCase))).ToArray();
 
-            var checkHasNoEstimateCount = openIssues.Count(i => CheckHasNoEstimate(i));
             var checkIsNotAssignedCount = openIssues.Count(i => CheckIsNotAssigned(i, columnLabelPrefix));
+            var checkHasNoEstimateCount = openIssues.Count(i => CheckHasNoEstimate(i));
             var checkOverburnedCount = openIssues.Count(i => CheckOverburned(i));
-            if (checkHasNoEstimateCount > 0)
-            {
-                reportData.Warnings.Add(string.Format("There are {0} unestimated issues in the dataset. They have not been included in the report.", checkHasNoEstimateCount));
-            }
             if (checkIsNotAssignedCount > 0)
             {
                 reportData.Warnings.Add(string.Format("There are {0} unassigned issues in the dataset. They have not been included in the report.", checkIsNotAssignedCount));
+            }
+            if (checkHasNoEstimateCount > 0)
+            {
+                reportData.Warnings.Add(string.Format("There are {0} unestimated issues in the dataset. They have not been included in the report.", checkHasNoEstimateCount));
             }
             if (checkOverburnedCount > 0)
             {
@@ -42,8 +40,8 @@ namespace Jmp.Reports
             }
 
             var validIssues = openIssues.Where(i =>
-                !CheckHasNoEstimate(i) &&
                 !CheckIsNotAssigned(i, columnLabelPrefix) &&
+                !CheckHasNoEstimate(i) &&
                 !CheckOverburned(i))
                 .ToArray();
 
@@ -72,13 +70,17 @@ namespace Jmp.Reports
             foreach (var g in issueGroups)
             {
                 var capacity = 0;
-                if (weeklyCapacityHoursPerStream.ContainsKey("*"))
+                if (weeklyCapacityHoursPerStream.ContainsKey(g.Key))
+                {
+                    capacity = weeklyCapacityHoursPerStream[g.Key];
+                }
+                else if (weeklyCapacityHoursPerStream.ContainsKey("*"))
                 {
                     capacity = weeklyCapacityHoursPerStream["*"];
                 }
                 else
                 {
-                    capacity = weeklyCapacityHoursPerStream[g.Key];
+                    capacity = 0;
                 }
                 weeklyCapacitySecondsPerStream.Add(g.Key, capacity * 60 * 60);
             }
@@ -185,14 +187,9 @@ namespace Jmp.Reports
 
         #region Helpers
 
-        private bool CheckClosedWithEstimate(Issue i)
+        private bool CheckClosedWithEstimate(Issue i, string[] issueFinalStatuses)
         {
-            return _issueFinalStatuses.Any(s => s.Equals(i.Fields.Status.Name, StringComparison.InvariantCultureIgnoreCase)) && i.Fields.TimeTracking.RemainingEstimateSeconds > 0;
-        }
-
-        private bool CheckHasNoEstimate(Issue i)
-        {
-            return string.IsNullOrEmpty(i.Fields.TimeTracking.RemainingEstimate);
+            return issueFinalStatuses.Any(s => s.Equals(i.Fields.Status.Name, StringComparison.InvariantCultureIgnoreCase)) && i.Fields.TimeTracking.RemainingEstimateSeconds > 0;
         }
 
         private bool CheckIsNotAssigned(Issue i, string columnLabelPrefix)
@@ -200,9 +197,14 @@ namespace Jmp.Reports
             return !i.Fields.Labels.Any(l => l.StartsWith(columnLabelPrefix));
         }
 
+        private bool CheckHasNoEstimate(Issue i)
+        {
+            return string.IsNullOrEmpty(i.Fields.TimeTracking.RemainingEstimate) || (i.Fields.TimeTracking.RemainingEstimateSeconds == 0 && i.Fields.TimeTracking.OriginalEstimateSeconds == 0);
+        }
+
         private bool CheckOverburned(Issue i)
         {
-            return i.Fields.TimeTracking.RemainingEstimateSeconds == 0;
+            return i.Fields.TimeTracking.RemainingEstimateSeconds == 0 && i.Fields.TimeTracking.OriginalEstimateSeconds != 0;
         }
 
         private static Issue GetPartialIssue(Issue original, long remainingEstimateSeconds)
@@ -215,7 +217,8 @@ namespace Jmp.Reports
                 ms.Position = 0;
                 copy = (Issue)formatter.Deserialize(ms);
             }
-            copy.Fields.Summary = string.Format("{{PARTIAL!}} {0}", copy.Fields.Summary);
+            copy.Origin = "JMP";
+            copy.Fields.Summary = string.Format("{0}", copy.Fields.Summary);
             copy.Fields.TimeTracking.RemainingEstimateSeconds = remainingEstimateSeconds;
             copy.Fields.TimeTracking.RemainingEstimate = string.Format("{0}h", remainingEstimateSeconds / 60 / 60);
             return copy;

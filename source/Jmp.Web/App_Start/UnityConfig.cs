@@ -37,11 +37,14 @@ namespace Jmp.Web.App_Start
         {
             var defaultReportSetup = new ReportSetup()
             {
-                JiraApiUrl = "https://orwell.atlassian.net/rest/api/2/",
-                JiraBrowseUrl = "https://orwell.atlassian.net/browse/",
                 Jql = "project=MVPD1",
                 ColumnLabelPrefix = "jmp-stream-",
-                WeeklyCapacityHoursPerStream = "*: 40"
+                WeeklyCapacityHoursPerStream = "*: 40",
+                IssueFinalStatuses = "DEV COMPLETE, CANCELLED",
+                JiraApiUrl = "https://orwell.atlassian.net/rest/api/2/",
+                JiraShowIssueUrl = "https://orwell.atlassian.net/browse/",
+                JiraSearchIssuesUrl = "https://orwell.atlassian.net/issues/?jql="
+
             };
 
             container.RegisterInstance<ReportSetup>(defaultReportSetup, new ContainerControlledLifetimeManager());

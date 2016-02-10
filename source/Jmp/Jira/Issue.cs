@@ -16,5 +16,7 @@ namespace Jmp.Jira
         public string Self { get; set; }
 
         public IssueFields Fields { get; set; }
+
+        public string Origin { get; set; }
     }
 }

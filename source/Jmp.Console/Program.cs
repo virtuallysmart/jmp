@@ -29,8 +29,8 @@ namespace Jmp.Console
 
             var reportService = new ReportService();
             var capacity = new Dictionary<string, int>() { { "*", 40 } };
-
-            var report = reportService.GetReportData(issues, setup.ColumnLabelPrefix, capacity);
+            var issueFinalStatuses = new string[] { "DEV COMPLETE", "CANCELLED" };
+            var report = reportService.GetReportData(issues, setup.ColumnLabelPrefix, capacity, issueFinalStatuses);
         }
 
         public class ReportSetup

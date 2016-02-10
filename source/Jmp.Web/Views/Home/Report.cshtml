@@ -9,13 +9,20 @@
 </div>
 <hr />
 
-@foreach (var warning in Model.ReportData.Warnings)
-{
-    <div class="alert alert-danger small">@string.Format("WARNING: {0}", warning)</div>
-    //add jira search link maybe?
-}
 @if (Model.ReportData.Warnings.Count > 0)
 {
+    <div class="panel panel-danger">
+        <div class="panel-heading">REPORT WARNINGS:</div>
+        <div class="panel-body alert-danger">
+            <ul>
+                @foreach (var warning in Model.ReportData.Warnings)
+                {
+                    <li>@warning</li>
+                    //add jira search link maybe?
+                }
+            </ul>
+        </div>
+    </div>
     <hr />
 }
 
@@ -23,14 +30,14 @@
     <thead>
         <tr>
             <td>
-                Timeline
+                <a target="_blank" href='@string.Format("{0}{1}", Model.ReportSetup.JiraSearchIssuesUrl, Model.ReportSetup.Jql)'>Timeline</a>
                 <br />
                 <span class="badge">@string.Format("{0}w", Model.ReportData.Rows.Length)</span>
             </td>
             @foreach (var h in Model.ReportData.ColumnHeaders)
             {
                 <td>
-                    @h.Label
+                    <a target="_blank" href='@string.Format("{0}labels={1}{2}", Model.ReportSetup.JiraSearchIssuesUrl, Model.ReportSetup.ColumnLabelPrefix, h.Label)'>@h.Label</a>
                     <br />
                     <span class="badge">@string.Format("{0}h", h.TotalRemainingSeconds / 60 / 60)</span>
                 </td>
@@ -49,21 +56,21 @@
                 @foreach (var c in r.Cells)
                 {
                     <td>
-                        @{ string css; }
+                        @{ string headerCss; }
                         @if (c.UsedSeconds == 0)
                         {
-                            css = "alert-danger";
+                            headerCss = "alert-danger";
                         }
                         else if (c.CapacitySeconds / c.UsedSeconds > 1.5)
                         {
-                            css = "alert-warning";
+                            headerCss = "alert-warning";
                         }
                         else
                         {
-                            css = "alert-success";
+                            headerCss = "alert-success";
                         }
-                        <div class="alert @css">
-                            stream: @c.Label
+                        <div class="alert @headerCss">
+                            <b>@c.Label</b>
                             <br />
                             capacity: @string.Format("{0}h", c.CapacitySeconds / 60 / 60)
                             <br />
@@ -73,12 +80,19 @@
                         </div>
                         @foreach (var i in c.Issues)
                         {
-                            <div class="alert alert-info" title="@i.Fields.Summary">
-                                <a href="@string.Format("{0}{1}", Model.ReportSetup.JiraBrowseUrl, i.Key)" target="_blank" class="small">@i.Key</a>
+                            string issueCss;
+                            if (!string.IsNullOrEmpty(i.Origin) && i.Origin.Equals("jmp", StringComparison.InvariantCultureIgnoreCase))
+                            {
+                                issueCss = "alert-danger";
+                            }
+                            else
+                            {
+                                issueCss = "alert-info";
+                            }
+                            <div class="alert @issueCss" title="@i.Fields.Summary">
+                                <a href="@string.Format("{0}{1}", Model.ReportSetup.JiraShowIssueUrl, i.Key)" target="_blank" class="small">@i.Key</a>
                                 <br />
                                 <span class="badge">@i.Fields.TimeTracking.RemainingEstimate</span>
-                                <br />
-                                <span class="small">@StringHelper.Truncate(i.Fields.Summary, 15)</span>
                             </div>
                         }
                     </td>

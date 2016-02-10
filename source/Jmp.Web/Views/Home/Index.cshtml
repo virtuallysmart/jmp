@@ -16,27 +16,35 @@
                 @Html.LabelFor(u => u.JiraPassword)
                 @Html.PasswordFor(u => u.JiraPassword, new { @class = "form-control" })
             </div>
-            <div class="form-group">
-                @Html.LabelFor(u => u.JiraApiUrl)
-                @Html.TextBoxFor(u => u.JiraApiUrl, new { @class = "form-control", value = Model.JiraApiUrl })
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(u => u.JiraBrowseUrl)
-                @Html.TextBoxFor(u => u.JiraBrowseUrl, new { @class = "form-control", value = Model.JiraBrowseUrl })
-            </div>
-            <div class="form-group">
+            <div class="form-group small">
                 @Html.LabelFor(u => u.Jql)
                 @Html.TextBoxFor(u => u.Jql, new { @class = "form-control", value = Model.Jql })
             </div>
-            <div class="form-group">
+            <div class="form-group small">
                 @Html.LabelFor(u => u.ColumnLabelPrefix)
                 @Html.TextBoxFor(u => u.ColumnLabelPrefix, new { @class = "form-control", value = Model.ColumnLabelPrefix })
             </div>
-            <div class="form-group">
+            <div class="form-group small">
                 @Html.LabelFor(u => u.WeeklyCapacityHoursPerStream)
                 @Html.TextAreaFor(u => u.WeeklyCapacityHoursPerStream, new { @class = "form-control", value = Model.WeeklyCapacityHoursPerStream })
             </div>
-            <div class="form-group">
+            <div class="form-group small">
+                @Html.LabelFor(u => u.IssueFinalStatuses)
+                @Html.TextBoxFor(u => u.IssueFinalStatuses, new { @class = "form-control", value = Model.IssueFinalStatuses })
+            </div>
+            <div class="form-group small">
+                @Html.LabelFor(u => u.JiraApiUrl)
+                @Html.TextBoxFor(u => u.JiraApiUrl, new { @class = "form-control", value = Model.JiraApiUrl })
+            </div>
+            <div class="form-group small">
+                @Html.LabelFor(u => u.JiraShowIssueUrl)
+                @Html.TextBoxFor(u => u.JiraShowIssueUrl, new { @class = "form-control", value = Model.JiraShowIssueUrl })
+            </div>
+            <div class="form-group small">
+                @Html.LabelFor(u => u.JiraSearchIssuesUrl)
+                @Html.TextBoxFor(u => u.JiraSearchIssuesUrl, new { @class = "form-control", value = Model.JiraSearchIssuesUrl })
+            </div>
+            <div class="form-group small">
                 <input type="submit" class="form-control btn btn-primary" value="Generate" />
             </div>
         }
