@@ -69,7 +69,7 @@ namespace Jmp.Web.Controllers
             }
             foreach (var bs in byStream)
             {
-                var s = bs.Split(":".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                var s = bs.Trim().Split(":".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
                 if (s.Length == 0)
                 {
                     throw new ArgumentException("Invalid capacity setup format");
